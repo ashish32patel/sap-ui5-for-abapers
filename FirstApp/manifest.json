@@ -39,6 +39,10 @@
             "supportedLocales": [""],
             "fallbackLocale": ""
           }
+        },
+        "pos":{
+          "type": "sap.ui.model.json.JSONModel",
+          "uri": "PO.json"
         }
       }
     }

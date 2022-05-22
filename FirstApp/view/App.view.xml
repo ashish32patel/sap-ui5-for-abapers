@@ -9,6 +9,7 @@
             <Page title="{i18n>homePageTitle}">
                 <content>
                     <mvc:XMLView viewName="akp.po.walkthrough.view.PO"/>
+                    <mvc:XMLView viewName="akp.po.walkthrough.view.POList"/>
                 </content>
             </Page>
         </pages>
