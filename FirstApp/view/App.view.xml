@@ -8,41 +8,7 @@
         <pages>
             <Page title="{i18n>homePageTitle}">
                 <content>
-                    <Panel headerText="{i18n>helloPanelTitle}"
-                        class="sapUiResponsiveMargin" width="auto">
-
-                        <content>
-                          <l:VerticalLayout class="sapUiContentPadding" width="100%">
-                            <Text text="Purchase Order Report"/>
-
-                            <Input placeholder="{i18n>poNumber}" 
-                                    value = '{/poInput/poNumber}' 
-                                    description='Entered PO is {/poInput/poNumber}' 
-                                    valueLiveUpdate="true" />
-
-                            <Input placeholder="{i18n>poType}"
-                                    value = '{/poInput/poType}' 
-                                    description='Entered PO Type is {/poInput/poType}' 
-                                    valueLiveUpdate="true" />
-
-                            <Input placeholder="{i18n>plant}"
-                                    value = '{/poInput/plant}' 
-                                    description='Entered plant is {/poInput/plant}' 
-                                    valueLiveUpdate="true" />
-
-                            <Input placeholder="{i18n>companyCode}"
-                                    value = '{/poInput/companyCode}'
-                                    description='Entered Company Code is {/poInput/companyCode}' 
-                                    valueLiveUpdate="true" />
-
-                            <Button text="Search" 
-                            icon='sap-icon://search' 
-                            press=".onSearchPO('passing hard coded text from view')"/>
-
-                          </l:VerticalLayout>
-                        </content>
-
-                    </Panel>
+                    <mvc:XMLView viewName="akp.po.walkthrough.view.PO"/>
                 </content>
             </Page>
         </pages>
