@@ -6,29 +6,8 @@ sap.ui.define([
  ], function (Controller,MessageToast,JSONModel,ResourceModel) {
     "use strict";
     return Controller.extend("akp.po.walkthrough.controller.App", {
-      onInit: function () {
-        var poInput = {
-                        poInput: {
-                            poNumber: "xx",
-                            poType: "",
-                            plant: "",
-                            companyCode: "",
-                        },
-        };
-
-        var oModel = new JSONModel(poInput);
-        this.getView().setModel(oModel);
-
-        //Set i18n model on view
-        var i18nModel = new ResourceModel(
-            {
-                bundleName: "akp.po.walkthrough.i18n.i18n",
-            }
-        );
-        this.getView().setModel(i18nModel,"i18n");
-
-
-      },
+      // onInit: function () {
+      // },
 
       onSearchPO: function (evt) {
         // MessageToast.show("searching POs...")
