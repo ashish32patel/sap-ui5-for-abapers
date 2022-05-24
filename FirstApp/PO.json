@@ -10,7 +10,8 @@
         "Waers":"INR",
         "Plant":"DE01",
         "Bukrs":"1000",
-        "POType":"NB"
+        "POType":"NB",
+        "items": [{"item": "item A"},{"item": "item B"}]
       },
       {
         "Ebeln": "2",
@@ -22,79 +23,8 @@
         "Waers":"INR",
               "Plant":"DE01",
         "Bukrs":"1000",
-        "POType":"NB"
-      },
-          {
-        "Ebeln": "3",
-        "Menge": 108,
-        "Netpr": 120,
-        "Matnr": "MAT3",
-        "PODate": "2020-06-13T00:00:00",
-        "POStatus": "OPEN",
-        "Waers":"INR",
-              "Plant":"DE02",
-        "Bukrs":"2000",
-        "POType":"BN"
-      },
-          {
-        "Ebeln": "4",
-        "Menge": 789,
-        "Netpr": 1200,
-        "Matnr": "MAT4",
-        "PODate": "2020-06-12T00:00:00",
-        "POStatus": "PEND",
-        "Waers":"INR",
-              "Plant":"DE02",
-        "Bukrs":"2000",
-        "POType":"BN"
-      },
-      {
-        "Ebeln": "5",
-        "Menge": 98,
-        "Netpr": 100,
-        "Matnr": "MAT1",
-        "PODate": "2020-06-23T00:00:00",
-        "POStatus": "CONF",
-        "Waers":"INR",
-        "Plant":"DE03",
-        "Bukrs":"1000",
-        "POType":"NB"
-      },
-      {
-        "Ebeln": "6",
-        "Menge":321,
-        "Netpr": 9872,
-        "Matnr": "MAT2",
-        "PODate": "2020-06-21T00:00:00",
-        "POStatus": "CONF",
-        "Waers":"INR",
-              "Plant":"DE03",
-        "Bukrs":"1000",
-        "POType":"NB"
-      },
-          {
-        "Ebeln": "7",
-        "Menge": 108,
-        "Netpr": 120,
-        "Matnr": "MAT3",
-        "PODate": "2020-06-13T00:00:00",
-        "POStatus": "OPEN",
-        "Waers":"INR",
-              "Plant":"DE03",
-        "Bukrs":"2000",
-        "POType":"BN"
-      },
-          {
-        "Ebeln": "8",
-        "Menge": 789,
-        "Netpr": 1200,
-        "Matnr": "MAT4",
-        "PODate": "2020-06-12T00:00:00",
-        "POStatus": "PEND",
-        "Waers":"INR",
-              "Plant":"DE01",
-        "Bukrs":"2000",
-        "POType":"BN"
+        "POType":"NB",
+        "items": [{"item": "item C"},{"item": "item D"}]
       }
     ]
   }

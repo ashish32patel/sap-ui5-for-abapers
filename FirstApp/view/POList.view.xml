@@ -15,8 +15,12 @@
 				formatOptions: {showMeasure: false
                 }                
 			}"
-            numberUnit="{pos>Waers}"
-        />
+            numberUnit="{pos>POStatus}"
+            numberState="{= ${pos>Netpr} > 100 ? ${pos>Netpr} > 5000 ? 'Error' : 'Warning' : 'Success'}"
+            attributes="{pos>items}"
+        >
+        <ObjectAttribute text="{pos>item}" />
+        </ObjectListItem>
       </items>
    </List>
 </mvc:View>
