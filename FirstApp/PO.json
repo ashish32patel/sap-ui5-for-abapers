@@ -1,30 +1,108 @@
 {
-    "PurchaseOrders": [
-      {
-        "Ebeln": "1",
-        "Menge": 98,
-        "Netpr": 100,
-        "Matnr": "MAT1",
-        "PODate": "2020-06-23T00:00:00",
-        "POStatus": "CONF",
-        "Waers":"INR",
-        "Plant":"DE01",
-        "Bukrs":"1000",
-        "POType":"NB",
-        "items": [{"item": "item A"},{"item": "item B"}]
-      },
-      {
-        "Ebeln": "2",
-        "Menge":321,
-        "Netpr": 9872,
-        "Matnr": "MAT2",
-        "PODate": "2020-06-21T00:00:00",
-        "POStatus": "CONF",
-        "Waers":"INR",
-              "Plant":"DE01",
-        "Bukrs":"1000",
-        "POType":"NB",
-        "items": [{"item": "item C"},{"item": "item D"}]
-      }
-    ]
-  }
+  "PurchaseOrders": [
+    {
+      "Ebeln": "1",
+      "Menge": 98,
+      "Netpr": 100,
+      "Matnr": "MAT1",
+      "PODate": "2020-06-23T00:00:00",
+      "POStatus": "CONF",
+      "Waers": "INR",
+      "Plant": "DE01",
+      "Bukrs": "1000",
+      "POType": "NB",
+      "items": [{ "item": "item A" }, { "item": "item B" }]
+    },
+    {
+      "Ebeln": "2",
+      "Menge": 321,
+      "Netpr": 9872,
+      "Matnr": "MAT2",
+      "PODate": "2020-06-21T00:00:00",
+      "POStatus": "CONF",
+      "Waers": "INR",
+      "Plant": "DE01",
+      "Bukrs": "1000",
+      "POType": "NB",
+      "items": [{ "item": "item C" }, { "item": "item D" },{"item": "item X" }]
+    },
+    {
+      "Ebeln": "3",
+      "Menge": 108,
+      "Netpr": 120,
+      "Matnr": "MAT3",
+      "PODate": "2020-06-13T00:00:00",
+      "POStatus": "OPEN",
+      "Waers": "INR",
+      "Plant": "DE02",
+      "Bukrs": "2000",
+      "POType": "BN",
+      "items": [{ "item": "item E" }, { "item": "item F" }]
+    },
+    {
+      "Ebeln": "4",
+      "Menge": 789,
+      "Netpr": 1200,
+      "Matnr": "MAT4",
+      "PODate": "2020-06-12T00:00:00",
+      "POStatus": "PEND",
+      "Waers": "INR",
+      "Plant": "DE02",
+      "Bukrs": "2000",
+      "POType": "BN",
+      "items": [{ "item": "item G" }, { "item": "item H" }]
+    },
+    {
+      "Ebeln": "5",
+      "Menge": 98,
+      "Netpr": 100,
+      "Matnr": "MAT1",
+      "PODate": "2020-06-23T00:00:00",
+      "POStatus": "CONF",
+      "Waers": "INR",
+      "Plant": "DE03",
+      "Bukrs": "1000",
+      "POType": "NB",
+      "items": [{ "item": "item I" }, { "item": "item J" }]
+    },
+    {
+      "Ebeln": "6",
+      "Menge": 321,
+      "Netpr": 9872,
+      "Matnr": "MAT2",
+      "PODate": "2020-06-21T00:00:00",
+      "POStatus": "CONF",
+      "Waers": "INR",
+      "Plant": "DE03",
+      "Bukrs": "1000",
+      "POType": "NB",
+      "items": [{ "item": "item K" }, { "item": "item L" }]
+    },
+    {
+      "Ebeln": "7",
+      "Menge": 108,
+      "Netpr": 120,
+      "Matnr": "MAT3",
+      "PODate": "2020-06-13T00:00:00",
+      "POStatus": "OPEN",
+      "Waers": "INR",
+      "Plant": "DE03",
+      "Bukrs": "2000",
+      "POType": "BN",
+      "items": [{ "item": "item M" }, { "item": "item N" }]
+    },
+    {
+      "Ebeln": "8",
+      "Menge": 789,
+      "Netpr": 1200,
+      "Matnr": "MAT4",
+      "PODate": "2020-06-12T00:00:00",
+      "POStatus": "PEND",
+      "Waers": "INR",
+      "Plant": "DE01",
+      "Bukrs": "2000",
+      "POType": "BN",
+      "items": [{ "item": "item O" }, { "item": "item P" }]
+    }
+  ]
+}

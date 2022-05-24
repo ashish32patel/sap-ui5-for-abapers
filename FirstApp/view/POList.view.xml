@@ -1,4 +1,5 @@
 <mvc:View
+   controllerName="akp.po.walkthrough.controller.POList"
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <List
@@ -15,11 +16,17 @@
 				formatOptions: {showMeasure: false
                 }                
 			}"
-            numberUnit="{pos>POStatus}"
+            numberUnit="{pos>Waers}"
             numberState="{= ${pos>Netpr} > 100 ? ${pos>Netpr} > 5000 ? 'Error' : 'Warning' : 'Success'}"
             attributes="{pos>items}"
         >
-        <ObjectAttribute text="{pos>item}" />
+            <ObjectAttribute text="{pos>item}" />
+			<firstStatus>
+				<ObjectStatus text="{
+                    path:'pos>POStatus',
+                    formatter: '.formatter.statusText'
+                     } " />
+			</firstStatus>        
         </ObjectListItem>
       </items>
    </List>
