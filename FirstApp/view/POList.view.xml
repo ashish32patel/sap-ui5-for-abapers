@@ -17,6 +17,10 @@
          <Toolbar>
             <Title text="{i18n>poListTitle}"/>
             <ToolbarSpacer/>
+            <Button text="Sort by cCode"                      
+                        press=".onSortByCompanyCode"/>
+             <Button text="Group by cCode"  
+                        press=".onGroupByCompanyCode"/>
             <SearchField width="50%" placeholder="Search on Matnr" search=".onFilterPOsOnToolbar"/>
          </Toolbar>
       </headerToolbar>      

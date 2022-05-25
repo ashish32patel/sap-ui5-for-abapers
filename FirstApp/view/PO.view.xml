@@ -32,12 +32,18 @@
 	     <l:HorizontalLayout class="sapUiContentPadding" >
                         <Button text="Search" 
                         icon='sap-icon://search' 
-                        press=".onSearchPO('passing hard coded text from view')"/>
+                        press=".onSearchPO"/>
 
                         <Button text="Click me" 
                         icon='sap-icon://inspect' 
                         press=".onClickMe('passing hard coded text from view')"/>
+                        
+                        
+
+                       
               </l:HorizontalLayout>
+	   
+                       
            </l:VerticalLayout>
          </content>
 

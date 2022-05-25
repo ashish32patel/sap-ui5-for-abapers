@@ -28,6 +28,26 @@ sap.ui.define([
         var oBinding = oList.getBinding("items");
         oBinding.filter(aFilter);
 
+      },
+
+      onSortByCompanyCode : function (oEvent){
+        //build sorter array
+        var aSorter = [];
+        aSorter.push(new sap.ui.model.Sorter("Bukrs",false,false));
+
+        var oList = this.byId("idPOList");
+        var oBinding = oList.getBinding("items");
+        oBinding.sort(aSorter);
+      },
+
+      onGroupByCompanyCode : function (oEvent){
+        //build sorter array
+        var aSorter = [];
+        aSorter.push(new sap.ui.model.Sorter("Bukrs",false,true));
+
+        var oList = this.byId("idPOList");
+        var oBinding = oList.getBinding("items");
+        oBinding.sort(aSorter);        
       }
       
 
