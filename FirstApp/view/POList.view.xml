@@ -6,7 +6,13 @@
       id="idPOList"     
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{pos>/PurchaseOrders}" >
+      items="{
+          path: 'pos>/PurchaseOrders',
+          sorter: {
+              path: 'Plant',
+              group: true
+          }
+          }" >
       <headerToolbar>
          <Toolbar>
             <Title text="{i18n>poListTitle}"/>
