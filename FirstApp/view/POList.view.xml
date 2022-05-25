@@ -16,7 +16,7 @@
       </headerToolbar>      
       <items>
          <ObjectListItem
-            title="{pos>Ebeln} - {pos>Matnr}"
+            title="{pos>Ebeln} - {pos>POType} - {pos>Matnr} - {pos>Bukrs} "
 			number="{
 				parts:[{path:'pos>Netpr'},{path:'pos>Waers'}],
 		        type: 'sap.ui.model.type.Currency',
