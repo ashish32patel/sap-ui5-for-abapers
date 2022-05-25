@@ -3,8 +3,11 @@ sap.ui.define([
     'sap/m/MessageToast',
     "../model/formatter",
     "sap/ui/model/json/JSONModel",
-    "sap/ui/model/resource/ResourceModel"
- ], function (Controller,MessageToast,formatter,JSONModel,ResourceModel) {
+    "sap/ui/model/resource/ResourceModel",
+    "sap/ui/model/Filter",
+	  "sap/ui/model/FilterOperator"    
+ ], function (Controller,MessageToast,formatter,JSONModel,ResourceModel,
+  Filter,FilterOperator) {
     "use strict";
     return Controller.extend("akp.po.walkthrough.controller.PO", {
       
@@ -13,6 +16,25 @@ sap.ui.define([
       },
 
       onSearchPO: function (evt) {
+        //get search field from default model set at component level
+        var inputData = this.getView().getModel().getData().poInput;
+        var aFilter = [];
+        if (inputData.plant){
+          aFilter.push(new Filter("Plant", FilterOperator.Contains, inputData.plant));
+        }
+
+/**
+ * filter binding of model "pos" maintained at manifest so basically at component level as well
+ */
+        var posModel = this.getView().getModel("pos");
+       
+        //filter binding
+        var oList = this.getView().getParent().mAggregations.content[1].byId("idPOList")  //getting list controller from PO view
+        var oBinding = oList.getBinding("items");
+        oBinding.filter(aFilter);
+
+      },
+      onClickMe : function(evt) {
         // MessageToast.show("searching POs...")
         // MessageToast.show(evt);  //show hardcoded message recieved from view
 

@@ -29,11 +29,15 @@
                      value = '{/poInput/companyCode}'
                      description='Entered Company Code is {/poInput/companyCode}' 
                      valueLiveUpdate="true" />
+	     <l:HorizontalLayout class="sapUiContentPadding" >
+                        <Button text="Search" 
+                        icon='sap-icon://search' 
+                        press=".onSearchPO('passing hard coded text from view')"/>
 
-             <Button text="Search" 
-             icon='sap-icon://search' 
-             press=".onSearchPO('passing hard coded text from view')"/>
-
+                        <Button text="Click me" 
+                        icon='sap-icon://inspect' 
+                        press=".onClickMe('passing hard coded text from view')"/>
+              </l:HorizontalLayout>
            </l:VerticalLayout>
          </content>
 

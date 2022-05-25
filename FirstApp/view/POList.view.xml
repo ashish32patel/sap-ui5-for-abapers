@@ -3,10 +3,17 @@
    xmlns="sap.m"
    xmlns:mvc="sap.ui.core.mvc">
    <List
-      headerText="{i18n>poListTitle}"
+      id="idPOList"     
       class="sapUiResponsiveMargin"
       width="auto"
       items="{pos>/PurchaseOrders}" >
+      <headerToolbar>
+         <Toolbar>
+            <Title text="{i18n>poListTitle}"/>
+            <ToolbarSpacer/>
+            <SearchField width="50%" placeholder="Search on Matnr" search=".onFilterPOsOnToolbar"/>
+         </Toolbar>
+      </headerToolbar>      
       <items>
          <ObjectListItem
             title="{pos>Ebeln} - {pos>Matnr}"
@@ -26,7 +33,10 @@
                     path:'pos>POStatus',
                     formatter: '.formatter.statusText'
                      } " />
-			</firstStatus>        
+			</firstStatus>
+            <secondStatus>
+                <ObjectStatus text="{pos>Plant}" />
+            </secondStatus>        
         </ObjectListItem>
       </items>
    </List>
