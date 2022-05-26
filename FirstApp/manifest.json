@@ -61,7 +61,7 @@
           "target": "overview"
         },
         {
-          "pattern": "detail",
+          "pattern": "detail/{poPath}",
           "name": "detail",
           "target": "detail"
         }

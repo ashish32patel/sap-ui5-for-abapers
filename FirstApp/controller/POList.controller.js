@@ -51,8 +51,13 @@ sap.ui.define([
       },
 
       onPressDetail : function (oEvent){
+        //get the item that was clicked
+        var oItem = oEvent.getSource();
         var oRouter = this.getOwnerComponent().getRouter();
-        oRouter.navTo("detail");
+        oRouter.navTo("detail", {
+          poPath : window.encodeURIComponent(oItem.getBindingContext("pos").getPath().substr(1))
+        }
+        );
       }
       
 
