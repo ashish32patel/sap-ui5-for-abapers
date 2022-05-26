@@ -36,6 +36,8 @@
             numberUnit="{pos>Waers}"
             numberState="{= ${pos>Netpr} > 100 ? ${pos>Netpr} > 5000 ? 'Error' : 'Warning' : 'Success'}"
             attributes="{pos>items}"
+            type="Navigation"
+            press=".onPressDetail"
         >
             <ObjectAttribute text="{pos>item}" />
 			<firstStatus>

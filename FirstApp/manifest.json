@@ -1,49 +1,81 @@
 {
-    "_version": "1.12.0",
-    "sap.app": {
-      "id": "akp.po.walkthrough",
-      "type": "application",
-      "i18n": "i18n/i18n.properties",
-      "title": "{{appTitle}}",
-      "description": "{{appDescription}}",
-      "applicationVersion": {
-        "version": "1.0.0"
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "akp.po.walkthrough",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "rootView": {
+      "viewName": "akp.po.walkthrough.view.App",
+      "type": "XML",
+      "id": "app"
+    },
+    "dependencies": {
+      "minUI5Version": "1.93",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {}
       }
     },
-    "sap.ui": {
-      "technology": "UI5",
-      "deviceTypes": {
-          "desktop": true,
-          "tablet": true,
-          "phone": true
-      }
-    },
-    "sap.ui5": {
-      "rootView": {
-          "viewName": "akp.po.walkthrough.view.App",
-          "type": "XML",
-          "id": "app"
-      },
-      "dependencies": {
-        "minUI5Version": "1.93",
-        "libs": {
-          "sap.ui.core": {},
-          "sap.m": {}
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "akp.po.walkthrough.i18n.i18n",
+          "supportedLocales": [""],
+          "fallbackLocale": ""
         }
       },
-      "models": {
-        "i18n": {
-          "type": "sap.ui.model.resource.ResourceModel",
-          "settings": {
-            "bundleName": "akp.po.walkthrough.i18n.i18n",
-            "supportedLocales": [""],
-            "fallbackLocale": ""
-          }
+      "pos": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "PO.json"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "akp.po.walkthrough.view",
+        "controlId": "myApp",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
         },
-        "pos":{
-          "type": "sap.ui.model.json.JSONModel",
-          "uri": "PO.json"
+        {
+          "pattern": "detail",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "id": "overview",
+          "name": "Overview"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail"
         }
       }
     }
   }
+}

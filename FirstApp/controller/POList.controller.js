@@ -48,6 +48,11 @@ sap.ui.define([
         var oList = this.byId("idPOList");
         var oBinding = oList.getBinding("items");
         oBinding.sort(aSorter);        
+      },
+
+      onPressDetail : function (oEvent){
+        var oRouter = this.getOwnerComponent().getRouter();
+        oRouter.navTo("detail");
       }
       
 

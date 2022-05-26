@@ -19,6 +19,10 @@ sap.ui.define([
           // call the init function of the parent
           UIComponent.prototype.init.apply(this, arguments);
           
+
+         // create the views based on the url/hash
+         this.getRouter().initialize();
+
          //set data model 
           /**
            * Be aware that the models are directly set on the component and not on the root view 
