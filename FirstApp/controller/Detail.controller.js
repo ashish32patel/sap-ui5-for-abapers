@@ -1,7 +1,8 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/core/routing/History"
 
- ], function (Controller) {
+ ], function (Controller,History) {
     "use strict";
     return Controller.extend("akp.po.walkthrough.controller.Detail", {
       onInit: function () {
@@ -15,6 +16,19 @@ sap.ui.define([
           }
 
           )
+      },
+
+      onNavBack: function() {
+        var oHistory = History.getInstance();
+        var sPreviousHash = oHistory.getPreviousHash();
+        
+        if (sPreviousHash !== undefined) {
+            window.history.go(-1);
+
+        } else {
+            var oRouter = this.getOwnerComponent().getRouter();
+            oRouter.navTo("overview",{},true);
+        }
       }
 
     });
