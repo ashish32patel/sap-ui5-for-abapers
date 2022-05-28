@@ -1,0 +1,11 @@
+<mvc:View
+	height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<MessagePage showHeader="false"
+				 text="{i18n.InvalidPath.text}"				 
+				 description="{i18n>InvalidPath.description}"
+				 icon="sap-icon://message-warning">
+
+	</MessagePage>
+</mvc:View>

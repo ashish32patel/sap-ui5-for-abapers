@@ -52,7 +52,10 @@
         "viewType": "XML",
         "path": "akp.po.walkthrough.view",
         "controlId": "myApp",
-        "controlAggregation": "pages"
+        "controlAggregation": "pages",
+        "bypassed": {
+          "target":"invalidRoute"
+        }
       },
       "routes": [
         {
@@ -74,6 +77,11 @@
         "detail": {
           "id": "detail",
           "name": "Detail"
+        },
+        "invalidRoute": {
+          "id": "invalid",
+          "name": "Invalid",
+          "transition": "show"
         }
       }
     }
