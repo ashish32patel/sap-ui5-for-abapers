@@ -48,7 +48,25 @@ sap.ui.define([
          //  var i18nModel = new ResourceModel({
          //    bundleName: "akp.po.walkthrough.i18n.i18n",
          //  });
-         //  this.setModel(i18nModel, "i18n");           
+         //  this.setModel(i18nModel, "i18n");          
+         
+         /**
+          * log each time the Invalid path view is rendered
+          */
+          this.getRouter().attachBypassed((oEvent) => {
+             var sHash = oEvent.getParameter("hash");
+             console.log(`Hash ${sHash} is invalid`);          
+          });
+
+          /**
+           * log every route path
+           */
+          this.getRouter().attachRouteMatched((oEvent) => {
+             var sRouteName = oEvent.getParameter("name");
+             console.log(`Route ${sRouteName} is valid. `);
+          })
+
+
        }
     });
  });
