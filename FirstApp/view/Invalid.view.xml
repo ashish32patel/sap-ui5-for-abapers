@@ -1,11 +1,15 @@
 <mvc:View
-	height="100%"
+	controllerName="akp.po.walkthrough.controller.Invalid"
+
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
-	<MessagePage showHeader="false"
+	<MessagePage 
 				 text="{i18n.InvalidPath.text}"				 
 				 description="{i18n>InvalidPath.description}"
-				 icon="sap-icon://message-warning">
-
+				 icon="sap-icon://message-warning"
+				 showNavButton="true"
+				 navButtonPress="onBack"				 
+				 >
 	</MessagePage>
+
 </mvc:View>

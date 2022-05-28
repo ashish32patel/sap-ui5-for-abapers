@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    // "sap/ui/core/mvc/Controller",
+    "akp/po/walkthrough/controller/BaseController",
     "sap/ui/core/routing/History"
 
- ], function (Controller,History) {
+ ], function (BaseController,History) {
     "use strict";
-    return Controller.extend("akp.po.walkthrough.controller.Detail", {
+    return BaseController.extend("akp.po.walkthrough.controller.Detail", {
       onInit: function () {
           var oRouter = this.getOwnerComponent().getRouter();
           oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);
@@ -17,19 +18,19 @@ sap.ui.define([
 
           )
       },
-
-      onNavBack: function() {
-        var oHistory = History.getInstance();
-        var sPreviousHash = oHistory.getPreviousHash();
+    //-->now we are Reusing the onBack method defined in the BaseController.js
+    //   onNavBack: function() {
+    //     var oHistory = History.getInstance();
+    //     var sPreviousHash = oHistory.getPreviousHash();
         
-        if (sPreviousHash !== undefined) {
-            window.history.go(-1);
+    //     if (sPreviousHash !== undefined) {
+    //         window.history.go(-1);
 
-        } else {
-            var oRouter = this.getOwnerComponent().getRouter();
-            oRouter.navTo("overview",{},true);
-        }
-      }
+    //     } else {
+    //         var oRouter = this.getOwnerComponent().getRouter();
+    //         oRouter.navTo("overview",{},true);
+    //     }
+    //   }
 
     });
  });
