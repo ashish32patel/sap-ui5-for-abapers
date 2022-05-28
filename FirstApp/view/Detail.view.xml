@@ -2,7 +2,7 @@
 	controllerName="akp.po.walkthrough.controller.Detail"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
-	<Page
+	<Page id="idDetailParent"
 		title="{i18n>detailPageTitle}"
 		showNavButton="true"
 		navButtonPress="onBack">
@@ -17,6 +17,12 @@
 		}" >
 		<StandardListItem
 			title="{pos>item}"/>
-	</List>			
+	</List>	
+
+	<content>
+		<!-- two views will be inserted here via routing  -->
+	</content>
+
+
 	</Page>
 </mvc:View>

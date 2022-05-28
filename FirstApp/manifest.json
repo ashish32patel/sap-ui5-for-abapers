@@ -66,7 +66,7 @@
         {
           "pattern": "detail/{poPath}",
           "name": "detail",
-          "target": "detail"
+          "target": ["detail1", "detail2"]
         }
       ],
       "targets": {
@@ -82,6 +82,22 @@
           "id": "invalid",
           "name": "Invalid",
           "transition": "show"
+        },
+        "detail1": {
+          "id": "idDetail1",
+          "name": "Detail1",
+          "parent": "detail",
+          "controlId": "idDetailParent",
+          "controlAggregation": "content"
+
+        },
+        "detail2": {
+          "id": "idDetail2",
+          "name": "Detail2",
+          "parent": "detail",
+          "controlId": "idDetailParent",
+          "controlAggregation": "content"
+
         }
       }
     }
